@@ -1,0 +1,56 @@
+#---------------------------------------------------#
+## 配置文件需要放置在 $HOME/.config/clash.meta/*.yaml
+
+## 这份文件是clashX的基础配置文件，请尽量新建配置文件进行修改。
+
+## 如果您不知道如何操作，请参阅
+## Clash Meta wiki  https://docs.metacubex.one
+## Clash Meta wiki  https://clash-meta.wiki
+# 全局设置
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+
+# 节点配置（proxies）
+proxies:
+  - name: "洛杉矶01"
+    type: ss
+    server: t1.henrysheng.space
+    port: 13543
+    cipher: aes-256-cfb
+    password: "henry@111"
+  - name: "洛杉矶02"
+    type: trojan
+    server: t2.henrysheng.space
+    sni: "t2.henrysheng.space"
+    port: 443
+    password: "henry"
+  - name: "日本"
+    type: ss
+    server: 64.176.38.57
+    port: 19420
+    cipher: aes-256-cfb
+    password: "henry@111"
+
+# 节点分组（proxy-groups）
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - "洛杉矶01"
+      - "洛杉矶02"
+      - "日本"
+      - "DIRECT"
+
+# 规则设置（rules）
+rules:
+  - DOMAIN-SUFFIX,google.com, Proxy
+  - DOMAIN-KEYWORD,facebook, Proxy
+  - DOMAIN-KEYWORD,namecheap, Proxy
+  - DOMAIN-KEYWORD,deepseek, Proxy
+  - DOMAIN,google.com, Proxy
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
