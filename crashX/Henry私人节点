@@ -16,6 +16,12 @@ external-controller: '127.0.0.1:9090'
 
 # 节点配置（proxies）
 proxies:
+  - name: "洛杉矶(独享节点)"
+    type: trojan
+    server: t3.henrysheng.space
+    sni: "t3.henrysheng.space"
+    port: 443
+    password: "henry"
   - name: "洛杉矶01"
     type: ss
     server: t1.henrysheng.space
@@ -40,6 +46,7 @@ proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
+      - "洛杉矶(独享节点)"
       - "洛杉矶01"
       - "洛杉矶02"
       - "日本"
