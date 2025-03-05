@@ -17,12 +17,18 @@ external-controller: '127.0.0.1:9090'
 
 # 节点配置（proxies）
 proxies:
-  - name: "硅谷(独享节点)"
+  - name: "硅谷"
     type: trojan
-    server: t3.henrysheng.space
-    sni: "t3.henrysheng.space"
+    server: t5.henrysheng.space
+    sni: "t5.henrysheng.space"
     port: 443
-    password: "henry"
+    password: henry
+  - name: "香港"
+    type: ss
+    server: t4.henrysheng.space
+    cipher: aes-256-cfb
+    port: 16700
+    password: teddysun.com
   - name: "洛杉矶01"
     type: ss
     server: t1.henrysheng.space
