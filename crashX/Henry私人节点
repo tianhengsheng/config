@@ -22,7 +22,7 @@ proxies:
     server: t5.henrysheng.space
     sni: "t5.henrysheng.space"
     port: 443
-    password: henry
+    password: "henry"
   - name: "香港"
     type: ss
     server: t4.henrysheng.space
