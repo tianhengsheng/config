@@ -28,7 +28,7 @@ proxies:
     server: t4.henrysheng.space
     cipher: aes-256-cfb
     port: 16700
-    password: teddysun.com
+    password: "teddysun.com"
   - name: "洛杉矶01"
     type: ss
     server: t1.henrysheng.space
