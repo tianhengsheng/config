@@ -53,7 +53,8 @@ proxy-groups:
   - name: "Proxy"
     type: select
     proxies:
-      - "硅谷(独享节点)"
+      - "硅谷"
+      - "香港"
       - "洛杉矶01"
       - "洛杉矶02"
       - "日本"
