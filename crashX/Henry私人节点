@@ -23,12 +23,6 @@ proxies:
     sni: "t5.henrysheng.space"
     port: 443
     password: "henry"
-  - name: "香港"
-    type: ss
-    server: t4.henrysheng.space
-    cipher: aes-256-cfb
-    port: 16700
-    password: "teddysun.com"
   - name: "洛杉矶01"
     type: ss
     server: t1.henrysheng.space
