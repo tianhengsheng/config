@@ -66,6 +66,8 @@ rules:
   - DOMAIN-KEYWORD,facebook, Proxy
   - DOMAIN-KEYWORD,namecheap, Proxy
   - DOMAIN-KEYWORD,deepseek, Proxy
+  - DOMAIN-KEYWORD,openai, "硅谷"
+  - DOMAIN-KEYWORD,chatgpt, "硅谷"
   - DOMAIN,google.com, Proxy
   - GEOIP,CN,DIRECT
   - MATCH,Proxy
