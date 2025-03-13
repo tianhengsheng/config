@@ -23,12 +23,6 @@ proxies:
     sni: "t5.henrysheng.space"
     port: 443
     password: "henry"
-  - name: "洛杉矶01"
-    type: ss
-    server: t1.henrysheng.space
-    port: 13543
-    cipher: aes-256-cfb
-    password: "henry@111"
   - name: "洛杉矶02"
     type: trojan
     server: t2.henrysheng.space
@@ -48,8 +42,6 @@ proxy-groups:
     type: select
     proxies:
       - "硅谷"
-      - "香港"
-      - "洛杉矶01"
       - "洛杉矶02"
       - "日本"
       - "DIRECT"
